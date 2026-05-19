@@ -30,9 +30,6 @@ export function Footer({ language }: FooterProps) {
           <Link href="https://wa.me/5586988269144" target="_blank" rel="noreferrer" className="hover:text-black transition-colors">
             WhatsApp
           </Link>
-          <Link href="mailto:contact@atlassoftware.com" className="hover:text-black transition-colors">
-            Email
-          </Link>
         </div>
       </div>
     </footer>

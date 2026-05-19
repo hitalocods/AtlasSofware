@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Mail } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import type { Language } from "@/lib/language";
 
 const InstagramIcon = ({ className }: { className?: string }) => (
@@ -85,13 +85,6 @@ export function Contact({ language }: ContactProps) {
             WhatsApp
           </a>
 
-          <a
-            href="mailto:contact@atlassoftware.com"
-            className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm text-brand-900 font-medium hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-300 group"
-          >
-            <Mail size={20} className="text-brand-900/50 group-hover:text-brand-900 transition-colors" />
-            Email
-          </a>
         </motion.div>
       </div>
     </section>

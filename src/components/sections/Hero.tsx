@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, BarChart3, Layout, Activity } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import type { Language } from "@/lib/language";
 
 const copy = {
@@ -55,67 +55,41 @@ export function Hero({ language }: HeroProps) {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Link 
+            <a
               href="#contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-900 text-white font-medium hover:bg-black transition-colors"
             >
               {copy[language].primaryCta}
-            </Link>
-            <Link 
+            </a>
+            <a
               href="#projects"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white border border-gray-200 text-brand-900 font-medium hover:bg-gray-50 transition-colors group shadow-sm"
             >
               {copy[language].secondaryCta}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
         </motion.div>
 
-        {/* Right UI Mockup */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative lg:h-[600px] flex items-center justify-center lg:justify-end"
         >
-          <div className="relative w-full max-w-md aspect-square md:aspect-auto md:h-[500px] rounded-3xl border border-gray-200 bg-white/70 backdrop-blur-xl shadow-2xl p-6 overflow-hidden flex flex-col gap-4">
+          <div className="relative w-full max-w-md aspect-square md:aspect-auto md:h-[500px] rounded-3xl border border-gray-200 bg-white/80 backdrop-blur-xl shadow-2xl p-8 overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent" />
-            
-            {/* Header Mockup */}
-            <div className="relative flex items-center justify-between pb-4 border-b border-gray-100">
-              <div className="w-24 h-4 rounded bg-gray-200" />
-              <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-accent" />
-              </div>
+            <div className="relative w-full max-w-sm aspect-[2/1]">
+              <Image
+                src="/logo-atlas.png"
+                alt="Atlas Software"
+                fill
+                priority
+                sizes="(min-width: 1024px) 384px, 80vw"
+                className="object-contain"
+              />
             </div>
 
-            {/* Cards Mockup */}
-            <div className="relative flex-1 grid grid-cols-2 gap-4">
-              <div className="col-span-2 rounded-2xl bg-gray-50 border border-gray-100 p-4 flex flex-col justify-between">
-                <Activity className="text-accent mb-4" size={20} />
-                <div>
-                  <div className="w-16 h-3 rounded bg-gray-200 mb-2" />
-                  <div className="w-32 h-6 rounded bg-brand-900/80" />
-                </div>
-              </div>
-              
-              <div className="rounded-2xl bg-gray-50/50 border border-gray-100 p-4 flex flex-col justify-between">
-                <BarChart3 className="text-brand-900/40 mb-4" size={20} />
-                <div className="w-full h-2 rounded bg-gray-200 mb-1" />
-                <div className="w-2/3 h-2 rounded bg-gray-200" />
-              </div>
-              
-              <div className="rounded-2xl bg-gray-50/50 border border-gray-100 p-4 flex flex-col justify-between">
-                <Layout className="text-brand-900/40 mb-4" size={20} />
-                <div className="flex gap-1">
-                  <div className="flex-1 h-8 rounded bg-gray-200" />
-                  <div className="flex-1 h-12 rounded bg-gray-300" />
-                  <div className="flex-1 h-6 rounded bg-gray-200" />
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Element */}
             <motion.div 
               animate={{ y: [-5, 5, -5] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
