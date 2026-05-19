@@ -40,7 +40,7 @@ export function Navbar({ language, onToggleLanguage }: NavbarProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center mt-6 px-4">
-      <nav className="w-full max-w-5xl bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4 transition-all duration-300 shadow-sm">
+      <nav className="w-full max-w-5xl bg-white/85 backdrop-blur-md border border-white rounded-2xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4 transition-all duration-300 shadow-lg shadow-brand-900/5">
         <Link href="/" className="text-xl font-medium tracking-tight text-brand-900 hover:text-black transition-colors">
           Atlas Software
         </Link>
@@ -62,14 +62,14 @@ export function Navbar({ language, onToggleLanguage }: NavbarProps) {
             type="button"
             onClick={onToggleLanguage}
             aria-label={ariaLabel}
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-4 text-sm font-medium text-brand-900 hover:bg-gray-50 transition-colors"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-4 text-sm font-medium text-brand-900 hover:border-accent/30 hover:bg-accent/5 transition-colors"
           >
             <Languages size={16} />
             {nextLanguage}
           </button>
           <Link
             href="#contact"
-            className="px-5 py-2.5 rounded-full border border-gray-200 bg-white text-brand-900 text-sm font-medium hover:bg-gray-50 transition-colors"
+            className="px-5 py-2.5 rounded-full bg-brand-900 text-white text-sm font-medium hover:bg-black transition-colors"
           >
             {cta[language]}
           </Link>
@@ -80,7 +80,7 @@ export function Navbar({ language, onToggleLanguage }: NavbarProps) {
             type="button"
             onClick={onToggleLanguage}
             aria-label={ariaLabel}
-            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 text-sm font-medium text-brand-900 hover:bg-gray-50 transition-colors"
+            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 text-sm font-medium text-brand-900 hover:border-accent/30 hover:bg-accent/5 transition-colors"
           >
             <Languages size={16} />
             {nextLanguage}
@@ -117,7 +117,7 @@ export function Navbar({ language, onToggleLanguage }: NavbarProps) {
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="px-6 py-3 rounded-xl border border-gray-200 bg-white text-brand-900 text-center font-medium hover:bg-gray-50 transition-colors mt-2"
+              className="px-6 py-3 rounded-xl bg-brand-900 text-white text-center font-medium hover:bg-black transition-colors mt-2"
             >
               {cta[language]}
             </Link>

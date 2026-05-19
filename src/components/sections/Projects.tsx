@@ -146,7 +146,7 @@ type ProjectsProps = {
 
 export function Projects({ language }: ProjectsProps) {
   return (
-    <section id="projects" className="py-24 px-6 border-t border-gray-100 bg-white">
+    <section id="projects" className="py-24 px-6 bg-[#F5F7FA]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -173,7 +173,7 @@ export function Projects({ language }: ProjectsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative rounded-[2rem] border border-gray-200 bg-white overflow-hidden flex flex-col hover:border-gray-300 hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300"
+              className="group relative rounded-[2rem] border border-gray-200 bg-white overflow-hidden flex flex-col hover:border-accent/30 hover:shadow-xl hover:shadow-gray-300/60 transition-all duration-300"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-50">
                 <Image
@@ -203,7 +203,7 @@ export function Projects({ language }: ProjectsProps) {
                   {project.highlights.map((highlight) => (
                     <span
                       key={highlight}
-                      className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium text-brand-900/70"
+                      className="rounded-full border border-accent/10 bg-accent/5 px-3 py-1 text-xs font-medium text-brand-900/70"
                     >
                       {highlight}
                     </span>

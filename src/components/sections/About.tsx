@@ -54,11 +54,11 @@ export function About({ language }: AboutProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-8 rounded-3xl border border-gray-200 bg-gray-50/50 overflow-hidden hover:border-gray-300 hover:shadow-lg hover:shadow-gray-200/50 transition-all duration-300"
+              className="group relative p-8 rounded-3xl border border-gray-200 bg-[#F5F7FA] overflow-hidden hover:border-accent/30 hover:shadow-lg hover:shadow-gray-200/70 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-white/0 to-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 flex flex-col gap-6">
-                <div className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover:bg-gray-50 transition-colors shadow-sm">
+                <div className="w-12 h-12 rounded-full border border-accent/10 flex items-center justify-center bg-white group-hover:bg-accent/5 transition-colors shadow-sm">
                   {icons[index]}
                 </div>
                 <h3 className="text-xl font-medium text-brand-900">{title}</h3>

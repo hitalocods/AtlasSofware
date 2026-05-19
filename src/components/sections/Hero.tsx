@@ -26,11 +26,11 @@ type HeroProps = {
 
 export function Hero({ language }: HeroProps) {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 px-6 bg-brand-50">
-      {/* Background Effects */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 px-6 bg-[#F5F7FA]">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#E5E7EB_1px,transparent_1px),linear-gradient(to_bottom,#E5E7EB_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-50" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vh] bg-accent/10 blur-[120px] rounded-full" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#D9DEE8_1px,transparent_1px),linear-gradient(to_bottom,#D9DEE8_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_65%,transparent_100%)] opacity-70" />
+        <div className="absolute right-[-10vw] top-16 h-[36rem] w-[36rem] rounded-full bg-accent/15 blur-[120px]" />
+        <div className="absolute left-[-12vw] bottom-[-8rem] h-[28rem] w-[28rem] rounded-full bg-brand-900/10 blur-[110px]" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
@@ -77,8 +77,9 @@ export function Hero({ language }: HeroProps) {
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative lg:h-[600px] flex items-center justify-center lg:justify-end"
         >
-          <div className="relative w-full max-w-md aspect-square md:aspect-auto md:h-[500px] rounded-3xl border border-gray-200 bg-white/80 backdrop-blur-xl shadow-2xl p-8 overflow-hidden flex items-center justify-center">
+          <div className="relative w-full max-w-md aspect-square md:aspect-auto md:h-[500px] rounded-3xl border border-white/10 bg-brand-900 shadow-2xl shadow-brand-900/20 p-8 overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(58,91,255,0.28),transparent_32%),radial-gradient(circle_at_80%_90%,rgba(255,255,255,0.14),transparent_28%)]" />
             <div className="relative w-full max-w-sm aspect-[2/1]">
               <Image
                 src="/logo-atlas.png"
@@ -86,7 +87,7 @@ export function Hero({ language }: HeroProps) {
                 fill
                 priority
                 sizes="(min-width: 1024px) 384px, 80vw"
-                className="object-contain"
+                className="object-contain drop-shadow-2xl"
               />
             </div>
 

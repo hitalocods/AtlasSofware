@@ -40,8 +40,8 @@ type ContactProps = {
 
 export function Contact({ language }: ContactProps) {
   return (
-    <section id="contact" className="py-32 px-6 border-t border-gray-100 bg-white relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-3xl max-h-3xl bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+    <section id="contact" className="py-32 px-6 bg-[#F5F7FA] relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-3xl max-h-3xl bg-accent/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10">
         <motion.div
@@ -69,7 +69,7 @@ export function Contact({ language }: ContactProps) {
             href="https://www.instagram.com/atlassoftware_/"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm text-brand-900 font-medium hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-300 group"
+            className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-sm text-brand-900 font-medium hover:border-accent/30 hover:bg-white shadow-sm transition-all duration-300 group"
           >
             <InstagramIcon className="text-brand-900/50 group-hover:text-brand-900 transition-colors" />
             Instagram
@@ -79,9 +79,9 @@ export function Contact({ language }: ContactProps) {
             href="https://wa.me/5586988269144"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-sm text-brand-900 font-medium hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all duration-300 group"
+            className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-900 text-white font-medium hover:bg-black shadow-sm transition-all duration-300 group"
           >
-            <MessageCircle size={20} className="text-brand-900/50 group-hover:text-brand-900 transition-colors" />
+            <MessageCircle size={20} className="text-white/70 group-hover:text-white transition-colors" />
             WhatsApp
           </a>
 

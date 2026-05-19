@@ -26,7 +26,7 @@ type StackProps = {
 
 export function Stack({ language }: StackProps) {
   return (
-    <section id="stack" className="py-24 px-6 border-t border-gray-100 bg-white">
+    <section id="stack" className="py-24 px-6 bg-brand-900">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export function Stack({ language }: StackProps) {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-brand-900">
+          <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-white">
             {title[language]}
           </h2>
         </motion.div>
@@ -48,7 +48,7 @@ export function Stack({ language }: StackProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="px-6 py-4 rounded-2xl border border-gray-200 bg-gray-50/50 flex items-center justify-center text-brand-900/60 hover:text-brand-900 hover:bg-white hover:border-gray-300 hover:shadow-sm transition-all duration-300"
+              className="px-6 py-4 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center text-white/65 hover:text-white hover:bg-white/10 hover:border-accent/40 transition-all duration-300"
             >
               <span className="text-sm font-medium tracking-wide">{tech}</span>
             </motion.div>
