@@ -25,14 +25,19 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 
 const copy = {
   pt: {
-    title: "Vamos criar algo excepcional.",
-    description: "Conte para nós o que você quer construir.",
+    title: "Quer tirar uma ideia do improviso?",
+    description: "Me chama com o que você precisa resolver. Eu te respondo com um caminho possível, escopo e próximos passos.",
+    whatsapp: "Pedir orçamento no WhatsApp",
   },
   en: {
-    title: "Let's build something exceptional.",
-    description: "Tell us what you want to create.",
+    title: "Want to move an idea out of improvisation?",
+    description: "Send what you need to solve. I will reply with a possible path, scope, and next steps.",
+    whatsapp: "Request quote on WhatsApp",
   },
 };
+
+const whatsappUrl =
+  "https://wa.me/5586988269144?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Atlas%20Software%20e%20quero%20fazer%20um%20or%C3%A7amento.";
 
 type ContactProps = {
   language: Language;
@@ -76,13 +81,13 @@ export function Contact({ language }: ContactProps) {
           </a>
 
           <a
-            href="https://wa.me/5586988269144"
+            href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-900 text-white font-medium hover:bg-black shadow-sm transition-all duration-300 group"
           >
             <MessageCircle size={20} className="text-white/70 group-hover:text-white transition-colors" />
-            WhatsApp
+            {copy[language].whatsapp}
           </a>
 
         </motion.div>

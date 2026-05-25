@@ -7,16 +7,20 @@ import type { Language } from "@/lib/language";
 
 const copy = {
   pt: {
-    tagline: "Criamos experiências digitais modernas com precisão e clareza.",
-    description: "Sites, aplicativos, automações e sistemas com IA construídos com design minimalista e engenharia limpa.",
+    tagline: "Sites, sistemas e automações para negócios que precisam vender, agendar e operar melhor.",
+    description:
+      "A Atlas transforma processos confusos em produtos digitais claros: landing pages, painéis, CRMs, reservas online e integrações com IA quando elas realmente ajudam.",
     primaryCta: "Solicitar orçamento",
-    secondaryCta: "Ver projetos",
+    secondaryCta: "Ver entregas reais",
+    proof: ["Projetos no ar", "Painel administrativo", "Banco de dados", "WhatsApp conectado"],
   },
   en: {
-    tagline: "Designing modern digital experiences with precision and clarity.",
-    description: "Websites, applications, automation and AI systems built with minimal design and clean engineering.",
+    tagline: "Websites, systems, and automations for businesses that need to sell, book, and operate better.",
+    description:
+      "Atlas turns messy processes into clear digital products: landing pages, dashboards, CRMs, online booking, and AI integrations when they actually help.",
     primaryCta: "Request a Quote",
-    secondaryCta: "View Projects",
+    secondaryCta: "See real work",
+    proof: ["Live projects", "Admin panel", "Database", "WhatsApp connected"],
   },
 };
 
@@ -68,6 +72,17 @@ export function Hero({ language }: HeroProps) {
               {copy[language].secondaryCta}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
+          </div>
+
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 pt-2" aria-label={language === "pt" ? "Capacidades da Atlas" : "Atlas capabilities"}>
+            {copy[language].proof.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-brand-900/10 bg-white/70 px-4 py-2 text-xs font-medium text-brand-900/65 shadow-sm"
+              >
+                {item}
+              </span>
+            ))}
           </div>
         </motion.div>
 

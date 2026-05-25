@@ -6,14 +6,16 @@ import type { Language } from "@/lib/language";
 
 const copy = {
   pt: {
-    title: "Um estúdio para precisão digital.",
-    description: "Projetamos e desenvolvemos sistemas digitais refinados para marcas que valorizam clareza, desempenho e elegância.",
-    cards: ["Interfaces", "Aplicativos web", "Sistemas com IA"],
+    title: "Tecnologia enxuta para problemas reais.",
+    description:
+      "Entramos onde o negócio perde tempo: atendimento manual, planilhas soltas, agendamentos sem controle e sites que não explicam bem o valor da empresa.",
+    cards: ["Interfaces que vendem", "Sistemas para operar", "IA aplicada com criterio"],
   },
   en: {
-    title: "A studio for digital precision.",
-    description: "We design and build refined digital systems for brands that value clarity, performance and elegance.",
-    cards: ["Interfaces", "Web Apps", "AI Systems"],
+    title: "Lean technology for real problems.",
+    description:
+      "We focus on where the business loses time: manual support, scattered spreadsheets, unmanaged bookings, and websites that do not explain the company's value clearly.",
+    cards: ["Interfaces that sell", "Systems for operations", "AI with clear purpose"],
   },
 };
 

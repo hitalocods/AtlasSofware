@@ -49,17 +49,21 @@ const projectLinks = {
 
 const copy = {
   pt: {
-    title: "Projetos selecionados",
-    description: "Produtos reais publicados, com interfaces sob medida, integrações e estrutura para operar no dia a dia.",
+    title: "Entregas reais, sem vitrine falsa",
+    description: "Alguns projetos publicados pela Atlas, com foco em resolver uma rotina concreta do cliente.",
     projectLink: "Projeto online",
     instagramLink: "Instagram",
     highlightsLabel: "Destaques",
+    problemLabel: "Problema",
+    deliveryLabel: "Entrega",
+    resultLabel: "Resultado",
     projects: [
       {
         name: "Arena Chapas",
         category: "Sistema de reservas",
-        description:
-          "Plataforma para agendamento de horários com banco de dados, painel administrativo e CRUD para confirmar e gerenciar reservas com mais controle operacional.",
+        problem: "Reservas dependiam de conversa manual e ficavam difíceis de acompanhar.",
+        delivery: "Agendamento online com banco de dados, painel administrativo e CRUD de horários.",
+        result: "Mais controle sobre reservas, confirmações e disponibilidade da arena.",
         highlights: ["Banco de dados", "Painel admin", "CRUD de horários"],
         alt: "Tela do sistema Arena Chapas",
         ...projectLinks.arenaChapas,
@@ -67,8 +71,9 @@ const copy = {
       {
         name: "C.S Studio Beauty",
         category: "Landing page",
-        description:
-          "Página de marca focada em apresentação profissional e conversão para agendamentos, com visual limpo para valorizar o posicionamento do estúdio.",
+        problem: "O studio precisava se apresentar melhor antes da conversa no Instagram ou WhatsApp.",
+        delivery: "Página de marca com serviços, visual limpo e caminhos diretos para agendamento.",
+        result: "Presença digital mais profissional e menos atrito para novas clientes entrarem em contato.",
         highlights: ["Marca", "Agendamento", "Presença digital"],
         alt: "Tela da landing page C.S Studio Beauty",
         ...projectLinks.studioBeauty,
@@ -76,8 +81,9 @@ const copy = {
       {
         name: "Atlas CRM",
         category: "CRM e gestão",
-        description:
-          "Interface de CRM com CRUD para organizar clientes e processos internos, pensada para centralizar rotinas comerciais em uma experiência simples.",
+        problem: "Clientes e etapas comerciais ficavam espalhados sem uma visão única.",
+        delivery: "Interface de CRM com dashboard e CRUD para organizar rotinas internas.",
+        result: "Processo comercial mais visível, com informações centralizadas para tomada de decisão.",
         highlights: ["CRM", "CRUD", "Dashboard"],
         alt: "Tela do dashboard Atlas CRM",
         ...projectLinks.atlasCrm,
@@ -85,8 +91,9 @@ const copy = {
       {
         name: "Trino Imobiliária",
         category: "Portal imobiliário",
-        description:
-          "Sistema imobiliário com banco de dados, CRUD e cadastro de fotos, permitindo publicar e atualizar imóveis com mais autonomia.",
+        problem: "Atualizar imóveis, fotos e informações dependia de um fluxo pouco prático.",
+        delivery: "Portal imobiliário com banco de dados, CRUD e cadastro de fotos.",
+        result: "Mais autonomia para publicar e manter imoveis atualizados.",
         highlights: ["Banco de dados", "Fotos", "Gestão de imóveis"],
         alt: "Tela do portal Trino Imobiliária",
         ...projectLinks.trino,
@@ -94,17 +101,21 @@ const copy = {
     ],
   },
   en: {
-    title: "Selected Projects",
-    description: "Live products with tailored interfaces, integrations, and structure for everyday operations.",
+    title: "Real work, no fake showcase",
+    description: "A few live projects built by Atlas, each focused on a concrete client workflow.",
     projectLink: "Live project",
     instagramLink: "Instagram",
     highlightsLabel: "Highlights",
+    problemLabel: "Problem",
+    deliveryLabel: "Delivery",
+    resultLabel: "Result",
     projects: [
       {
         name: "Arena Chapas",
         category: "Booking System",
-        description:
-          "Scheduling platform with database, admin panel, and CRUD flows to confirm and manage bookings with stronger operational control.",
+        problem: "Bookings depended on manual conversations and were hard to track.",
+        delivery: "Online scheduling with database, admin panel, and schedule CRUD.",
+        result: "More control over reservations, confirmations, and venue availability.",
         highlights: ["Database", "Admin panel", "Schedule CRUD"],
         alt: "Arena Chapas system screen",
         ...projectLinks.arenaChapas,
@@ -112,8 +123,9 @@ const copy = {
       {
         name: "C.S Studio Beauty",
         category: "Landing Page",
-        description:
-          "Brand page focused on professional presentation and appointment conversion, with a clean look that supports the studio's positioning.",
+        problem: "The studio needed to present itself better before the Instagram or WhatsApp conversation.",
+        delivery: "Brand page with services, clean visuals, and direct booking paths.",
+        result: "A more professional digital presence and less friction for new clients to reach out.",
         highlights: ["Brand", "Booking", "Digital presence"],
         alt: "C.S Studio Beauty landing page screen",
         ...projectLinks.studioBeauty,
@@ -121,8 +133,9 @@ const copy = {
       {
         name: "Atlas CRM",
         category: "CRM Interface",
-        description:
-          "CRM interface with CRUD flows to organize customers and internal processes, designed to centralize sales routines in a simple experience.",
+        problem: "Customers and commercial stages were scattered without a single view.",
+        delivery: "CRM interface with dashboard and CRUD to organize internal routines.",
+        result: "A clearer commercial process with centralized information for decisions.",
         highlights: ["CRM", "CRUD", "Dashboard"],
         alt: "Atlas CRM dashboard screen",
         ...projectLinks.atlasCrm,
@@ -130,8 +143,9 @@ const copy = {
       {
         name: "Trino Imobiliária",
         category: "Real Estate Portal",
-        description:
-          "Real estate system with database, CRUD, and photo uploads, giving the team more autonomy to publish and update property listings.",
+        problem: "Updating listings, photos, and property information depended on an impractical flow.",
+        delivery: "Real estate portal with database, CRUD, and photo uploads.",
+        result: "More autonomy to publish and keep property listings updated.",
         highlights: ["Database", "Photos", "Property management"],
         alt: "Trino Imobiliária portal screen",
         ...projectLinks.trino,
@@ -194,9 +208,22 @@ export function Projects({ language }: ProjectsProps) {
                   <h3 className="text-2xl font-medium text-brand-900 mb-3">
                     {project.name}
                   </h3>
-                  <p className="text-sm md:text-base text-brand-900/60 leading-relaxed max-w-xl">
-                    {project.description}
-                  </p>
+                  <dl className="mt-5 grid gap-3 text-sm md:text-base">
+                    {[
+                      [copy[language].problemLabel, project.problem],
+                      [copy[language].deliveryLabel, project.delivery],
+                      [copy[language].resultLabel, project.result],
+                    ].map(([label, text]) => (
+                      <div key={label} className="rounded-2xl border border-gray-100 bg-[#F5F7FA] p-4">
+                        <dt className="mb-1 text-xs font-semibold uppercase tracking-widest text-brand-900/45">
+                          {label}
+                        </dt>
+                        <dd className="text-brand-900/68 leading-relaxed">
+                          {text}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
                 </div>
 
                 <div className="flex flex-wrap gap-2" aria-label={copy[language].highlightsLabel}>

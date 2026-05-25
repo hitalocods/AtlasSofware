@@ -6,20 +6,22 @@ import type { Language } from "@/lib/language";
 const copy = {
   pt: {
     title: "Nosso processo",
+    description: "Um fluxo curto, claro e pensado para colocar algo utilizável no ar sem enrolar o projeto.",
     steps: [
-      { num: "01", title: "Estratégia" },
-      { num: "02", title: "Design" },
-      { num: "03", title: "Desenvolvimento" },
-      { num: "04", title: "Lançamento" },
+      { num: "01", title: "Diagnóstico", description: "Mapeamos objetivo, público, rotina atual e o que precisa mudar." },
+      { num: "02", title: "Direção visual", description: "Criamos uma interface limpa, coerente com a marca e fácil de entender." },
+      { num: "03", title: "Construção", description: "Desenvolvemos telas, banco de dados, integrações e painel quando necessário." },
+      { num: "04", title: "Publicação", description: "Colocamos no ar, testamos o fluxo principal e ajustamos a primeira versão." },
     ],
   },
   en: {
     title: "Our Process",
+    description: "A short, clear workflow designed to put something usable online without dragging the project.",
     steps: [
-      { num: "01", title: "Strategy" },
-      { num: "02", title: "Design" },
-      { num: "03", title: "Development" },
-      { num: "04", title: "Launch" },
+      { num: "01", title: "Diagnosis", description: "We map the goal, audience, current workflow, and what needs to change." },
+      { num: "02", title: "Visual direction", description: "We design a clean interface that fits the brand and is easy to understand." },
+      { num: "03", title: "Build", description: "We develop screens, database, integrations, and admin panels when needed." },
+      { num: "04", title: "Launch", description: "We publish, test the main flow, and refine the first version." },
     ],
   },
 };
@@ -42,6 +44,9 @@ export function Process({ language }: ProcessProps) {
           <h2 className="text-2xl md:text-3xl font-medium tracking-tight text-brand-900">
             {copy[language].title}
           </h2>
+          <p className="mt-4 max-w-2xl text-brand-900/60 leading-relaxed">
+            {copy[language].description}
+          </p>
         </motion.div>
 
         <div className="relative">
@@ -62,6 +67,9 @@ export function Process({ language }: ProcessProps) {
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-brand-900 mb-2">{step.title}</h3>
+                  <p className="max-w-xs text-sm leading-relaxed text-brand-900/58">
+                    {step.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

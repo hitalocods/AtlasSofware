@@ -5,9 +5,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
-import { Stack } from "@/components/sections/Stack";
 import { Projects } from "@/components/sections/Projects";
 import { Process } from "@/components/sections/Process";
+import { Trust } from "@/components/sections/Trust";
 import { Contact } from "@/components/sections/Contact";
 import type { Language } from "@/lib/language";
 
@@ -21,8 +21,8 @@ export function HomeContent() {
       <main className="flex-1 w-full overflow-hidden">
         <Hero language={language} />
         <About language={language} />
-        <Stack language={language} />
         <Projects language={language} />
+        <Trust language={language} />
         <Process language={language} />
         <Contact language={language} />
       </main>

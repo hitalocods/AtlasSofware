@@ -10,14 +10,12 @@ const links = {
   pt: [
     { name: "Início", href: "#home" },
     { name: "Sobre", href: "#about" },
-    { name: "Tecnologias", href: "#stack" },
     { name: "Projetos", href: "#projects" },
     { name: "Contato", href: "#contact" },
   ],
   en: [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Stack", href: "#stack" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ],
