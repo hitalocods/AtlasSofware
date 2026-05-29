@@ -952,36 +952,54 @@ h1 {
   right: clamp(14px, 3vw, 28px);
   bottom: clamp(14px, 3vw, 28px);
   z-index: 45;
-  min-height: 56px;
+  min-height: 62px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  max-width: min(330px, calc(100vw - 28px));
-  padding: 0 22px;
+  gap: 12px;
+  max-width: min(360px, calc(100vw - 28px));
+  padding: 0 18px 0 20px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(20, 184, 166, 0.96));
   color: #ffffff;
-  box-shadow: 0 18px 46px rgba(37, 99, 235, 0.28);
+  box-shadow: 0 18px 46px rgba(37, 99, 235, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.28);
   font-size: 0.86rem;
   font-weight: 900;
   text-transform: uppercase;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(14px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .floating-quote::before {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   flex: 0 0 auto;
-  margin-right: 10px;
   border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.2);
+  background: #d9ff63;
+  box-shadow: 0 0 0 7px rgba(217, 255, 99, 0.22);
+}
+
+.floating-quote::after {
+  content: "→";
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: grid;
+  place-items: center;
+  margin-left: 2px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1rem;
 }
 
 .floating-quote:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 54px rgba(37, 99, 235, 0.34);
+  transform: translateY(-4px);
+  filter: saturate(1.06);
+  box-shadow: 0 24px 60px rgba(37, 99, 235, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
 .menu-open .floating-quote {
@@ -1242,7 +1260,7 @@ h1 {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
-    padding-bottom: 98px;
+    padding-bottom: 112px;
   }
 
   .site-footer nav {
@@ -1250,13 +1268,22 @@ h1 {
   }
 
   .floating-quote {
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
+    left: 12px;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
     width: auto;
-    min-height: 54px;
-    padding-inline: 16px;
-    font-size: 0.78rem;
+    min-height: 60px;
+    justify-content: center;
+    padding: 0 14px 0 16px;
+    border-radius: 18px;
+    font-size: 0.8rem;
+    box-shadow: 0 14px 34px rgba(37, 99, 235, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  }
+
+  .floating-quote::after {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
   }
 }
 
@@ -1323,7 +1350,9 @@ h1 {
   .floating-quote {
     left: 10px;
     right: 10px;
-    font-size: 0.72rem;
+    min-height: 58px;
+    font-size: 0.73rem;
+    letter-spacing: 0;
   }
 }
 
